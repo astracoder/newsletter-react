@@ -1,3 +1,121 @@
 .main {
     width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.main__content {
+    width: 55rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main__content h2 {
+    font-size: 4.8rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.main__content h3 {
+    color: var(--orange);
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.main__content p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 8em;
+}
+
+.form {
+    width: 60rem;
+    height: auto;
+}
+
+.inputs {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.inputs input {
+    color: var(--light-200);
+    font-size: 1.8rem;
+
+    height: 4rem;
+    margin-bottom: 2rem;
+    background: transparent;
+    border: 0;
+    transition: .2s ease;
+}
+
+.inputs span {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 1rem;
+    transition: .2s ease;
+    pointer-events: none;
+    letter-spacing: .1rem;
+    margin-top: 1rem;
+}
+
+.inputs input:valid ~ span,
+.inputs input:focus ~ span {
+    color: var(--orange);
+    font-size: 1.2rem;
+    transform: translateY(-3rem);
+}
+
+.inputs i {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    width: 100%;
+    height: .2rem;
+    background: transparent;
+    left: 0%;
+    transition: .5s ease;
+}
+
+.inputs i::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.inputs input:valid ~ i::before,
+.inputs input:focus ~ i::before {
+    left: 0;
+    background: var(--orange);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#btn__send {
+    color: var(--light);
+    font-size: 1.8rem;
+    width: 50%;
+    height: 5rem;
+    border-radius: .5rem;
+    background: var(--orange);
+    border: 0;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+#btn__send:hover {
+    background: var(--orange-200);
 }

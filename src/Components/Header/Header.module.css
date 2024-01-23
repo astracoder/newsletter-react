@@ -23,6 +23,8 @@
 
     background: var(--orange);
     transition: .2s ease;
+    border-radius: .5rem;
+    cursor: pointer;
 }
 
 .button__cta:hover {

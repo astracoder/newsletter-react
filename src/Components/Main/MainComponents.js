@@ -9,15 +9,17 @@ const MainComponents = () => {
             <p>Preecha os campos para receber as notificações</p>
             <form className={styles.form} action="#">
                 <div className={styles.inputs}>
-                    <label for="name">Nome: </label>
-                    <input type="text" name="name" id={styles.input__name} placeholder="Digite o seu nome completo..."></input>
+                    <input type="text" name="name" id={styles.input__name} required></input>
+                    <span>Nome:</span>
+                    <i></i>
                 </div>
                 <div className={styles.inputs}>
-                    <label for="email">E-mail: </label>
-                    <input type="email" name="email" id={styles.input__email} placeholder="Digite o seu melhor e-mail..."></input>
+                    <input type="email" name="email" id={styles.input__email} required></input>
+                    <span>E-mail:</span>
+                    <i></i>
                 </div>
                 <div className={styles.buttons}>
-                    <button type="submit" id={styles.btn__sen}>Enviar</button> 
+                    <button type="submit" id={styles.btn__send}>Enviar</button> 
                 </div>
             </form>
         </section>
