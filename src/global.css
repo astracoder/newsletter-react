@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+  outline: 0;
+}
+
+:root {
+  --green: #04D361;
+  --green-200: #00ff73;
+  --orange: #ff4800;
+  --orange-200: #ca3900;
+  --red: #be2121;
+  --green-place: #66ff004d;
+  --dark: #0C0C0C;
+  --dark-200: #2e2e2e;
+  --brown: #251209;
+  --brown-200: #1d0d05;
+  --light: #F9f9f9;
+  --light-200: #bbbbbb;
+  --gray: #AEAEAE;
+  --gray-200: #525252;
+}
+
+body, html {
+  color: var(--light);
+  font-size: 62.5%;
+
+  background: var(--dark);
+  background: -webkit-linear-gradient(to right, var(--dark), var(--brown));  
+  background: linear-gradient(to right, var(--dark), var(--brown));
+}

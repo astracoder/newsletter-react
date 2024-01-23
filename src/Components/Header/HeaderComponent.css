@@ -1,0 +1,30 @@
+.header {
+    padding: 2rem 12rem;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 2.4rem;
+}
+
+.header__logo span {
+    color: var(--orange);
+}
+
+.button__cta {
+    color: var(--light);
+    padding: 1.5rem;
+    border: 0;
+
+    background: var(--orange);
+    transition: .2s ease;
+}
+
+.button__cta:hover {
+    background: var(--orange-200);
+}
