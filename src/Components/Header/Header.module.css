@@ -16,6 +16,24 @@
     color: var(--orange);
 }
 
+.header__button {
+    display: flex;
+}
+
+.header__button a {
+    font-size: 1.4rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    transition: .2s ease;
+
+    display: flex;
+    align-items: center;
+}
+
+.header__button a:hover {
+    color: var(--orange);
+}
+
 .button__cta {
     color: var(--light);
     padding: 1.5rem;
