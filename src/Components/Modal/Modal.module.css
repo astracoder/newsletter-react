@@ -3,7 +3,7 @@
     z-index: 2;
     min-width: 100vw;
     max-height: 100vh;
-    background: red;
+    background: var(--dark-trans);
 }
 
 .modal__content {
@@ -15,8 +15,8 @@
     border: .1rem solid var(--dark-200);
     border-radius: .5rem;
     position: absolute;
-    top: 50vh;
-    left: 50vw;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 
     display: flex;

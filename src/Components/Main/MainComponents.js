@@ -1,8 +1,15 @@
 import styles from './Main.module.css';
-
 import { MdAccountCircle, MdAlternateEmail } from 'react-icons/md';
 
+import { useState } from 'react';
+import ModalComponents from "../Modal/ModalComponents";
+
 const MainComponents = () => {
+    const [isOpenModal, setIsOpenModal] = useState(false);
+
+    const [nameValue, setNameValue] = useState();
+    const [emailValue, setEmailValue] = useState();
+
   return (
     <main className={styles.main}>
         <section className={styles.main__content}>
@@ -12,21 +19,37 @@ const MainComponents = () => {
             <form className={styles.form} action="#">
                 <MdAccountCircle className={styles.icons} />
                 <div className={styles.inputs}>
-                    <input type="text" name="name" id={styles.input__name} required></input>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id={styles.input__name} 
+                        onChange={e => setNameValue(e.target.value)}
+                        required
+                    ></input>
                     <span>Nome:</span>
                     <i></i>
                 </div>
                 <MdAlternateEmail className={styles.icons} />
                 <div className={styles.inputs}>
-                    <input type="text" name="email" id={styles.input__email} required></input>
+                    <input 
+                        type="text" 
+                        name="email" 
+                        id={styles.input__email} 
+                        onChange={e => setEmailValue(e.target.value)}
+                        required
+                    ></input>
                     <span>E-mail:</span>
                     <i></i>
                 </div>
                 <div className={styles.buttons}>
-                    <button type="submit" id={styles.btn__send}>Enviar</button> 
+                    <button  
+                        id={styles.btn__send}
+                        onClick={() => setIsOpenModal(true)}
+                    >Enviar</button> 
                 </div>
             </form>
         </section>
+        <ModalComponents isOpen={isOpenModal} isClose={() => setIsOpenModal(!isOpenModal)}/>
     </main>
     )
 }

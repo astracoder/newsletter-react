@@ -1,17 +1,20 @@
 import styles from './Modal.module.css';
-
 import { IoCloseCircle } from "react-icons/io5";
 
-const ModalComponents = () => {
-    return (
-        <dialog className={styles.modal} open>
-            <div className={styles.modal__content}>
-                <p className={styles.text__success}>E-mail cadastrado com <span>sucesso!</span></p>
-                <p className={styles.text__error}>E-mail <span>não</span> cadastrado!</p>
-                <button className={styles.btn__close}><IoCloseCircle /></button>
+const ModalComponents = ({ isOpen, isClose }) => {
+    if(isOpen) {
+        return (
+            <div className={styles.modal}>
+                <div className={styles.modal__content}>
+                    <p className={styles.text__success}>Nome:</p>
+                    <p className={styles.text__error}>E-mail:</p>
+                    <button onClick={isClose} className={styles.btn__close}><IoCloseCircle /></button>
+                </div>
             </div>
-        </dialog>
-    )
+        )
+    }
+
+    return null;
 }
 
 export default ModalComponents;
