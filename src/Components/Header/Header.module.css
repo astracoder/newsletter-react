@@ -34,6 +34,14 @@
     color: var(--orange);
 }
 
+.header__button .icons {
+    margin-right: 1rem;
+}
+
+.header__button {
+    font-size: 3rem;
+}
+
 .button__cta {
     color: var(--light);
     padding: 1.5rem;

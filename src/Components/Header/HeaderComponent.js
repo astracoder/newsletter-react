@@ -1,8 +1,8 @@
 import styles from './Header.module.css';
 
-import { MdOutlineRoundaboutRight } from 'react-icons/md';
-import { MdHistory } from 'react-icons/md';
+import { MdOutlineRoundaboutRight, MdHistory } from 'react-icons/md';
 import { TiContacts } from 'react-icons/ti';
+import { FaBook } from "react-icons/fa";
 
 const HeaderComponent = () => {
     let test = true;
@@ -15,10 +15,10 @@ const HeaderComponent = () => {
                     <h1><span>D</span>razic</h1>
                 </div>
                 <div className={styles.header__button}>
-                    <a><MdOutlineRoundaboutRight /> SOBRE</a>
-                    <a><MdHistory /> HISTÓRIA</a>
-                    <a><TiContacts /> CONTATOS</a>
-                    <button className={styles.button__cta}>COMPRAR EBOOK</button>
+                    <a><MdOutlineRoundaboutRight className={styles.icons}/> SOBRE</a>
+                    <a><MdHistory className={styles.icons}/> HISTÓRIA</a>
+                    <a><TiContacts className={styles.icons}/> CONTATOS</a>
+                    <button className={styles.button__cta}><FaBook className={styles.icons}/> COMPRAR EBOOK</button>
                 </div>
             </div>
         </header>

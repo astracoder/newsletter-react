@@ -1,5 +1,7 @@
 import styles from './Main.module.css';
 
+import { MdAccountCircle, MdAlternateEmail } from 'react-icons/md';
+
 const MainComponents = () => {
   return (
     <main className={styles.main}>
@@ -8,11 +10,13 @@ const MainComponents = () => {
             <h3>Fique por dentro de todas as novidades</h3>
             <p>Preecha os campos para receber as notificações</p>
             <form className={styles.form} action="#">
+                <MdAccountCircle className={styles.icons} />
                 <div className={styles.inputs}>
                     <input type="text" name="name" id={styles.input__name} required></input>
                     <span>Nome:</span>
                     <i></i>
                 </div>
+                <MdAlternateEmail className={styles.icons} />
                 <div className={styles.inputs}>
                     <input type="text" name="email" id={styles.input__email} required></input>
                     <span>E-mail:</span>
