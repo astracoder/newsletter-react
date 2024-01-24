@@ -14,7 +14,7 @@ const MainComponents = () => {
                     <i></i>
                 </div>
                 <div className={styles.inputs}>
-                    <input type="email" name="email" id={styles.input__email} required></input>
+                    <input type="text" name="email" id={styles.input__email} required></input>
                     <span>E-mail:</span>
                     <i></i>
                 </div>
