@@ -5,10 +5,27 @@ import { useState } from 'react';
 import ModalComponents from "../Modal/ModalComponents";
 
 const MainComponents = () => {
-    const [isOpenModal, setIsOpenModal] = useState(false);
+const [isOpenModal, setIsOpenModal] = useState(false);
+const [nameValue, setNameValue] = useState('');
+const [emailValue, setEmailValue] = useState('');
+const [isSuccess, setIsSuccess] = useState(false);
 
-    const [nameValue, setNameValue] = useState();
-    const [emailValue, setEmailValue] = useState();
+const cleanInputs = () => {
+    setNameValue('');
+    setEmailValue('');
+};
+
+const handleClick = (e) => {
+    e.preventDefault();
+
+    if(nameValue && emailValue && isNaN(nameValue) && isNaN(emailValue)) {
+        setIsOpenModal(!isOpenModal);
+        setIsSuccess(true);
+    } else {
+        setIsOpenModal(!isOpenModal);
+        setIsSuccess(false);
+    }
+};
 
   return (
     <main className={styles.main}>
@@ -44,12 +61,18 @@ const MainComponents = () => {
                 <div className={styles.buttons}>
                     <button  
                         id={styles.btn__send}
-                        onClick={() => setIsOpenModal(true)}
+                        onClick={handleClick}
                     >Enviar</button> 
                 </div>
             </form>
         </section>
-        <ModalComponents isOpen={isOpenModal} isClose={() => setIsOpenModal(!isOpenModal)}/>
+        <ModalComponents 
+            name={nameValue} 
+            email={emailValue} 
+            isOpen={isOpenModal} 
+            isClose={() => setIsOpenModal(!isOpenModal)}
+            isSuccess={isSuccess}
+        />
     </main>
     )
 }
