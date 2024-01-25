@@ -21,9 +21,11 @@ const handleClick = (e) => {
     if(nameValue && emailValue && isNaN(nameValue) && isNaN(emailValue)) {
         setIsOpenModal(!isOpenModal);
         setIsSuccess(true);
+        cleanInputs();
     } else {
         setIsOpenModal(!isOpenModal);
         setIsSuccess(false);
+        cleanInputs();
     }
 };
 
@@ -41,6 +43,7 @@ const handleClick = (e) => {
                         name="name" 
                         id={styles.input__name} 
                         onChange={e => setNameValue(e.target.value)}
+                        value={nameValue}
                         required
                     ></input>
                     <span>Nome:</span>
@@ -53,6 +56,7 @@ const handleClick = (e) => {
                         name="email" 
                         id={styles.input__email} 
                         onChange={e => setEmailValue(e.target.value)}
+                        value={emailValue}
                         required
                     ></input>
                     <span>E-mail:</span>
